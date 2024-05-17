@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="rs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>NBS IPS</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Generator IPS QR kodova</h1>
+        <p>
+            Sa ovim generatorom, možete brzo i jednostavno da dobijete 
+            IPS QR kod za primanje uplata na vaš tekući račun.
+        </p>
+        <p>
+            Budite spokojni, Vaši lični podaci ne napuštaju pregledač.
+        </p>
+        <form id="generator" action="#">
+            <div class="data-input">
+                <h2>Podaci o primaocu</h2>
+                <label for="name">Ime *</label>
+                <input type="text" name="name" placeholder="Malina Vojvodić" required>
+                <label for="address">Ulica i broj</label>
+                <input type="text" name="address" placeholder="Topolska 18">
+                <label for="place">Mesto *</label>
+                <input type="text" name="place" placeholder="Beograd" required>
+                <label for="account-number">Broj bankovnog računa *</label>
+                <input type="text" name="account" maxlength="20" placeholder="260-0056010016113-79" required>
+                <div class="code-and-text">
+                    <label for="code-and-text">Šifra plaćanja i svrha uplate *</label>
+                    <div class="code-and-text-inputs">
+                        <input class="code" type="number" name="code" placeholder="289" required>
+                        <input class="text" type="text" name="purpose" placeholder="Transakcije po nalogu građana" required>
+                    </div>
+                </div>
+                <label for="amount">Iznos</label>
+                <input type="text" name="amount" placeholder="1000.00">
+                <div class="submit-area">
+                    <button class="btn">Generiši</button>
+                    <small class="footnote">Polja označena zvezdicom (*) su obavezna.</small>
+                </div>
+            </div>
+            <div class="data-input">
+                <figure class="qr">
+                    <div class="qr-placement">
+                        <canvas height="300" width="300"></canvas>
+                    </div>
+                    <figcaption>IPS QR kod</figcaption>
+                </figure>
+            </div>
+        </form>
+    </main>
+    <script src="./src/qrcode.js"></script>
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

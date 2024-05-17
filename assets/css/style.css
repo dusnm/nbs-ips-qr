@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+
+    --primary: #a6e3a1;
+    --accent: #cba6f7;
+    --text: #cdd6f4;
+    --background: #11111b;
+    --dark: #181825;
+    --error: #f38ba8;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+  
+h2 {
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+h3 {
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+h4 {
+    font-size: 0.875rem;
+    color: var(--accent);
+}
+
+h5 {
+    font-size: 0.75rem;
+    color: var(--accent);
+}
+
+h6 {
+    font-size: 0.625rem;
+    color: var(--accent);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+}
+
+input {
+    padding: 0.5rem 1rem;
+    background-color: var(--dark);
+    border: none;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container {
+    margin: 1rem auto;
+    width: 70%;
+}
+
+.footnote {
+    display: block;
+}
+
+.submit-area {
+    margin-top: 0.5rem;
+}
+
+.btn {
+    cursor: pointer;
+    color: var(--background);
+    background-color: var(--accent);
+    border-style: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    margin-bottom: 0.5rem;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+}
+
+.data-input {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 1rem;
+    border: 3px dashed var(--accent);
+    border-radius: 30px;
+    width: 100%;
+}
+
+.code-and-text {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.code-and-text-inputs {
+    display: flex;
+}
+
+.code-and-text-inputs .code {
+    width: 15%;
+    margin-right: 0.5rem;
+    text-align: center;
+}
+
+.code-and-text-inputs .text {
+    width: 85%;
+}
+
+.qr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.qr-placement {
+    border: 2px dashed var(--primary);
+    border-radius: 30px;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+#error-box {
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+    background-color: var(--error);
+    color: var(--dark);
+}
+
+@media screen and (max-width: 880px)  {
+    form {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+}
